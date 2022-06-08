@@ -6,12 +6,11 @@
 /*   By: omartine <omartine@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/07 18:01:03 by omartine          #+#    #+#             */
-/*   Updated: 2022/06/07 18:10:02 by omartine         ###   ########.fr       */
+/*   Updated: 2022/06/08 20:01:57 by omartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 int	main(int argc, char **argv)
 {
@@ -20,7 +19,7 @@ int	main(int argc, char **argv)
 	char	letter;
 
 	if (argc < 2)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		while (argv[i])
@@ -30,10 +29,10 @@ int	main(int argc, char **argv)
 				if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
 				{
 					letter = (argv[i][j] - 'a') + 'A';
-					cout << (char) letter;
+					std::cout << (char) letter;
 				}
 				else
-					cout << (char)argv[i][j];
+					std::cout << (char)argv[i][j];
 				j++;
 			}
 			j = 0;
